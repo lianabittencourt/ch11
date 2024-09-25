@@ -1,0 +1,6 @@
+PNBOIA_HOST='18.230.154.85'
+PNBOIA_DB='pnboia'
+PNBOIA_DB_DEV='pnboia_dev'
+PNBOIA_USER='liana'
+PNBOIA_PSW='liana@mar11'
+PNBOIA_PORT='5432'
