@@ -1,4 +1,0 @@
-SELECT * FROM moored.register_buoys 
-WHERE name LIKE '%IMBITUBA%' -- ID=29 
--- WHERE name LIKE '%ALCATRAZES%'  -- ID=27
-ORDER BY start_date DESC
