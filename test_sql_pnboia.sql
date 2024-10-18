@@ -2,33 +2,24 @@
 -- buoys --> status atual da boia (true ou false)
 
 
--- ABROLHOS
-SELECT * FROM moored.buoys
-WHERE name LIKE '%ABROLHOS%'  
+SELECT * FROM moored.buoys         -- status atual da boia
+-- WHERE name LIKE '%IMBITUBA%'    -- ID=29
+-- WHERE name LIKE '%ALCATRAZES%'  -- ID=27 
+WHERE antenna_id LIKE '%30362%'  
 
-SELECT * FROM moored.register_buoys
-WHERE name LIKE '%ABROLHOS%'  
--- ORDER BY start_date DESC
-ORDER BY id DESC
-
-
--- PECEM
 SELECT * from moored.buoys
 WHERE name LIKE '%PECEM%'
 
-SELECT * FROM moored.register_buoys
-WHERE name LIKE '%PECEM%'  
-ORDER BY start_date DESC
-
-
--- ANTARTICA
-SELECT * from moored.buoys
-WHERE name LIKE '%KELLER%'
-
 SELECT * FROM moored.register_buoys 
-WHERE name LIKE '%KELLER%'
+-- WHERE name LIKE '%IMBITUBA%' -- ID=29 
+WHERE name LIKE '%KELLER%'      -- ID=27
 ORDER BY start_date DESC
 
+
+SELECT * FROM inventory.hulls ORDER BY hull_id
+
+-- INSERT INTO inventory.hulls (hull_id, type, brand, model, hull_number, condition, observation, diameter, weight, project_id)
+-- VALUES (46, 'ONDOGRAFO', 'SOFAR', 'SPOTTER-V3', 'SPOT-30405R', 'OK', NULL, 0.42, 7.45, 2)
 
 
 
@@ -39,6 +30,15 @@ ORDER BY user_type
 -- WHERE id = 9;
 
 
-DELETE FROM moored.register_buoys
-where id=288
 
+SELECT * FROM moored.register_buoys
+-- WHERE EXTRACT(YEAR FROM start_date) IN (2023, 2024)
+WHERE EXTRACT(YEAR FROM end_date) IN (2023, 2024)
+AND mode LIKE '%FUNDEADA%';
+
+
+SELECT * FROM moored.buoys
+WHERE name LIKE '%CABO%'
+ORDER BY start_date
+
+SELECT * FROM get_operating_buoys('2023-09-01', '2023-12-31')
