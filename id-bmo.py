@@ -112,7 +112,7 @@ def main(semester, year):
     fig, ax = plt.subplots()
 
     # Barras de 'ID-BMO' (agora desenhadas primeiro)
-    bars = ax.bar(x - width/2, values, width, label='ID-BMO', color='#003366')
+    bars    = ax.bar(x - width/2, values, width, label='ID-BMO', color='#003366')
 
     # Barras de 'META FIXA' (agora desenhadas depois)
     ax.bar(x + width/2, meta, width, label='META FIXA', color='#cc0000')
