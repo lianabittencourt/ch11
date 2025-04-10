@@ -174,10 +174,10 @@ def main(semester, year):
     fig, ax = plt.subplots()
 
     # ID-BMO bars (drawn first)
-    bars = ax.bar(x - width/2, values, width, label='ID-BMO', color='#2E8B57')
+    bars = ax.bar(x - width/2, values, width, label='ID-BMO', color='#003366')
 
     # Fixed META bars (drawn after)
-    ax.bar(x + width/2, meta, width, label='META FIXA', color='#cc0000')
+    #ax.bar(x + width/2, meta, width, label='META FIXA', color='#cc0000')
     ax.axhline(50, color='red', linestyle='dashed', linewidth=1.5)
 
     # Add values on top of each blue bar
